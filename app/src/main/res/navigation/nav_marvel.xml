@@ -7,6 +7,26 @@
 
     <fragment
         android:id="@+id/allCharactersFragment"
-        android:name=""
+        android:name="com.br.leandro.desafio_mobile.presenter.view.AllCharactersFragment"
+        android:label="@string/character_title_action_br"
+        tools:layout="@layout/fragment_all_characters">
+        <action
+            android:id="@+id/action_allCharactersFragment_to_characterDetailsFragment"
+            app:destination="@+id/characterDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterDetailsFragment"
+        android:name="com.br.leandro.desafio_mobile.presenter.view.CharacterDetailsFragment"
+        android:label="@string/details_title_action_bar">
+        <argument
+            android:name="character"
+            app:argType="com.br.leandro.desafio_mobile.data.network.model.charcacter.Character"
+            app:nullable="false"/>
+        <action
+            android:id="@+id/action_characterDetailsFragment_to_comicsFragment"
+            app:destination="@+id/comicsFragment" />
+        </fragment>
+        
+
 
 </navigation>

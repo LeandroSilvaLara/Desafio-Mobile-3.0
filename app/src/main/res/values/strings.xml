@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Desafio_mobile</string>
     <string name="character_image_contentDesc">Character image</string>
+    <string name="character_title_action_br">Marvel Super Heroes</string>
+    <string name="no_results">No results 😓, please check your internet connection</string>
+    <string name="details_title_action_bar">Details</string>
 </resources>
