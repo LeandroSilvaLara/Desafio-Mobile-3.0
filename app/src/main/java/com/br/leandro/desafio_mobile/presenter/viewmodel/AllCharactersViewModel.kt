@@ -1,6 +1,20 @@
 package com.br.leandro.desafio_mobile.presenter.viewmodel
 
 import androidx.lifecycle.ViewModel
-import java.util.concurrent.Flow
+import androidx.lifecycle.viewModelScope
+import androidx.paging.PagingData
+import androidx.paging.cachedIn
+import com.br.leandro.desafio_mobile.data.network.model.charcacter.Character
+import com.br.leandro.desafio_mobile.data.repository.CharactersRepository
+import kotlinx.coroutines.flow.Flow
 
-class AllCharactersViewModel
+
+class AllCharactersViewModel(
+    private val repository: CharactersRepository
+) : ViewModel() {
+
+    fun getListData(): Flow<PagingData<Character>> {
+        return repository.getResultStream()
+            .cachedIn(viewModelScope)
+    }
+}

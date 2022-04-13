@@ -1,4 +1,4 @@
-package com.br.leandro.desafio_mobile.data.network.remote.charcacter
+package com.br.leandro.desafio_mobile.data.network.model.charcacter
 
 class MarvelResponse (
     val code: Int,
