@@ -26,7 +26,7 @@
             android:id="@+id/action_characterDetailsFragment_to_comicsFragment"
             app:destination="@+id/comicsFragment" />
         </fragment>
-        
+
 
 
 </navigation>

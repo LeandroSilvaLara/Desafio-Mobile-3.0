@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Kotlin/Desafio_mobile3.0/app/src/main/res/drawable/default_player.xml" value="0.1365" />
+        <entry key="..\:/Kotlin/Desafio_mobile3.0/app/src/main/res/layout/activity_marvel_youtuber.xml" value="0.18229166666666666" />
         <entry key="..\:/Kotlin/Desafio_mobile3.0/app/src/main/res/layout/activity_navigation.xml" value="0.34479166666666666" />
+        <entry key="..\:/Kotlin/Desafio_mobile3.0/app/src/main/res/layout/divisor.xml" value="0.18229166666666666" />
         <entry key="..\:/Kotlin/Desafio_mobile3.0/app/src/main/res/layout/fragment_all_characters.xml" value="0.18229166666666666" />
         <entry key="..\:/Kotlin/Desafio_mobile3.0/app/src/main/res/layout/item_character.xml" value="0.34479166666666666" />
         <entry key="..\:/Kotlin/Desafio_mobile3.0/app/src/main/res/layout/item_comic.xml" value="0.34479166666666666" />
+        <entry key="..\:/Kotlin/Desafio_mobile3.0/app/src/main/res/layout/item_video.xml" value="0.18229166666666666" />
       </map>
     </option>
   </component>
