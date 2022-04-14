@@ -2,6 +2,7 @@ package com.br.leandro.desafio_mobile.presenter
 
 import android.app.Application
 import com.br.leandro.desafio_mobile.presenter.di.marvelModule
+import com.br.leandro.desafio_mobile.presenter.di.youtubeModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

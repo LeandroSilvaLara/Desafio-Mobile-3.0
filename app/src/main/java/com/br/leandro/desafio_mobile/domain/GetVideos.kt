@@ -1,8 +1,9 @@
 package com.br.leandro.desafio_mobile.domain
 
-import android.provider.MediaStore
+import com.br.leandro.desafio_mobile.data.repository.YoutubeVideoRepository
 import com.br.leandro.desafio_mobile.domain.model.Video
 import java.lang.Exception
+
 
 class GetVideos(
     private val videoRepository: YoutubeVideoRepository
@@ -15,5 +16,5 @@ class GetVideos(
 }
 
 interface GetVideosUseCase {
-    suspend operator fun invoke(): List<MediaStore.Video>
+    suspend operator fun invoke(): List<Video>
 }

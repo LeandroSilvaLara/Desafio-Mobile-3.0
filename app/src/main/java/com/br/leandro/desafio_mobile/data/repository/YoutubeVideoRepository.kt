@@ -1,5 +1,10 @@
 package com.br.leandro.desafio_mobile.data.repository
 
+import com.br.leandro.desafio_mobile.data.api.YoutubeService
+import com.br.leandro.desafio_mobile.data.network.model.video.toVideo
+import com.br.leandro.desafio_mobile.data.network.remote.Output
+import com.br.leandro.desafio_mobile.data.network.remote.parseResponse
+import com.br.leandro.desafio_mobile.domain.model.Video
 import java.lang.Exception
 
 class YoutubeVideoRepositoryImpl(

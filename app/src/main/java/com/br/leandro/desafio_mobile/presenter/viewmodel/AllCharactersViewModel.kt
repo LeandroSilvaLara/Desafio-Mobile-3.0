@@ -4,12 +4,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.br.leandro.desafio_mobile.data.network.model.character.Character
 import com.br.leandro.desafio_mobile.data.repository.CharactersRepository
+import com.br.leandro.desafio_mobile.data.network.model.character.Character
 import kotlinx.coroutines.flow.Flow
 
-
 class AllCharactersViewModel(
+
     private val repository: CharactersRepository
 ) : ViewModel() {
 

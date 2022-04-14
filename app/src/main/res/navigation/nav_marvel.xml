@@ -33,7 +33,7 @@
         tools:layout="@layout/fragment_comics">
         <argument
             android:name="character"
-            app:argType="com.br.leandro.desafio_mobile.data.network.model.charcacter.Character"
+            app:argType="com.br.leandro.desafio_mobile.data.network.model.character.Character"
             app:nullable="false"/>
     </fragment>
 

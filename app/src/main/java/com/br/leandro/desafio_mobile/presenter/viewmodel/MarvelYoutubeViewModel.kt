@@ -4,6 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.br.leandro.desafio_mobile.domain.GetVideosUseCase
+import com.br.leandro.desafio_mobile.presenter.model.VideoUiModel
+import com.br.leandro.desafio_mobile.presenter.model.toVideoUiModel
 import kotlinx.coroutines.launch
 
 class MarvelYoutubeViewModel (

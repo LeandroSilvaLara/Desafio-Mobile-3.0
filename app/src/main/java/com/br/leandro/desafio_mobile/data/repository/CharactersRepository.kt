@@ -18,6 +18,6 @@ class CharactersRepository (private val apiService: MarvelService) {
 
     companion object {
         const val pageSize: Int = 20
-        const val pageMax: Int = 20
+        const val pageMax: Int = 200
     }
 }

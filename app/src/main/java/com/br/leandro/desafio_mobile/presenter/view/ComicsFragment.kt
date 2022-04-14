@@ -7,13 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
-import androidx.navigation.fragment.navArgs
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.br.leandro.desafio_mobile.R
 import com.br.leandro.desafio_mobile.databinding.FragmentComicsBinding
 import com.bumptech.glide.Glide
 
+
 class ComicsFragment : Fragment() {
+
     val args: ComicsFragmentArgs by navArgs()
     private lateinit var binding: FragmentComicsBinding
     private val navController: NavController by lazy {
@@ -23,7 +25,7 @@ class ComicsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentComicsBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -33,12 +35,9 @@ class ComicsFragment : Fragment() {
         return super.onOptionsItemSelected(item)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle){
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val uri = args.character.thumbnail.path+"."+args.character.thumbnail.extension
-        Glide.with(binding.imageView).load(uri).iinto(binding.imageView)
+        Glide.with(binding.imageView).load(uri).into(binding.imageView)
     }
-
-
-
 }

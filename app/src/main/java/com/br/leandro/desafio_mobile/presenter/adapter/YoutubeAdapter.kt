@@ -3,9 +3,12 @@ package com.br.leandro.desafio_mobile.presenter.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.br.leandro.desafio_mobile.R
+import com.br.leandro.desafio_mobile.databinding.ItemVideoBinding
+import com.br.leandro.desafio_mobile.presenter.model.VideoUiModel
 import com.bumptech.glide.Glide
 
-class YoutubeAdapter (
+class YoutubeAdapter(
     private val videos: List<VideoUiModel>,
     private val onItemClickListenerVideo: ((video: VideoUiModel) -> Unit)
 ) : RecyclerView.Adapter<YoutubeAdapter.YoutubeViewHolder>() {

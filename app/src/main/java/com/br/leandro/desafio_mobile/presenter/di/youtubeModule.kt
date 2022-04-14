@@ -1,5 +1,6 @@
 package com.br.leandro.desafio_mobile.presenter.di
 
+import com.br.leandro.desafio_mobile.data.api.YoutubeService
 import com.br.leandro.desafio_mobile.data.network.remote.YoutubeRetrofit
 import com.br.leandro.desafio_mobile.data.repository.YoutubeVideoRepository
 import com.br.leandro.desafio_mobile.data.repository.YoutubeVideoRepositoryImpl
