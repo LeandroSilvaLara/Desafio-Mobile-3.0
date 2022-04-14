@@ -26,7 +26,16 @@
             android:id="@+id/action_characterDetailsFragment_to_comicsFragment"
             app:destination="@+id/comicsFragment" />
         </fragment>
-
+    <fragment
+        android:id="@+id/comicsFragment"
+        android:name="com.br.leandro.desafio_mobile.presenter.view.ComicsFragment"
+        android:label="@string/comics_title_action_bar"
+        tools:layout="@layout/fragment_comics">
+        <argument
+            android:name="character"
+            app:argType="com.br.leandro.desafio_mobile.data.network.model.charcacter.Character"
+            app:nullable="false"/>
+    </fragment>
 
 
 </navigation>
