@@ -4,6 +4,7 @@ package com.br.leandro.desafio_mobile.presenter.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.br.leandro.desafio_mobile.data.network.model.comics.Comic
 import com.br.leandro.desafio_mobile.databinding.ItemComicBinding
 import com.bumptech.glide.Glide
 

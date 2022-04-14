@@ -13,6 +13,7 @@
         app:cardCornerRadius="8dp">
 
         <ImageView
+            android:id="@+id/comicThumbImageView"
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_gravity="center"
