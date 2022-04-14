@@ -1,4 +1,4 @@
-package com.br.leandro.desafio_mobile.data.network.model.charcacter
+package com.br.leandro.desafio_mobile.data.network.model.character
 
 data class Data (
     var offset: Int,

@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.br.leandro.desafio_mobile.data.network.model.charcacter.Character
+import com.br.leandro.desafio_mobile.data.network.model.character.Character
 import com.br.leandro.desafio_mobile.data.repository.CharactersRepository
 import kotlinx.coroutines.flow.Flow
 

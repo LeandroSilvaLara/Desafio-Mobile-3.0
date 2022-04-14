@@ -1,6 +1,6 @@
 package com.br.leandro.desafio_mobile.data.api
 
-import com.br.leandro.desafio_mobile.data.network.model.charcacter.MarvelResponse
+import com.br.leandro.desafio_mobile.data.network.model.character.MarvelResponse
 import com.br.leandro.desafio_mobile.data.network.model.comics.ComicsResponse
 import retrofit2.Response
 import retrofit2.http.GET
