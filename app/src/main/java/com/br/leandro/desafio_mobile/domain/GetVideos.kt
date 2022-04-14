@@ -1,6 +1,7 @@
 package com.br.leandro.desafio_mobile.domain
 
 import android.provider.MediaStore
+import com.br.leandro.desafio_mobile.domain.model.Video
 import java.lang.Exception
 
 class GetVideos(
