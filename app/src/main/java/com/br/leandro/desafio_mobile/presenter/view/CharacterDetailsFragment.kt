@@ -10,7 +10,11 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.br.leandro.desafio_mobile.R
+import com.br.leandro.desafio_mobile.databinding.FragmentCharacterDetailsBinding
+import com.br.leandro.desafio_mobile.presenter.viewmodel.CharacterDetailsViewModel
 import com.bumptech.glide.Glide
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CharacterDetailsFragment : Fragment() {
 
