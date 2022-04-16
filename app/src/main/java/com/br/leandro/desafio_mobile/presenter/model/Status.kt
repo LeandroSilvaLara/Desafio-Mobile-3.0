@@ -1,4 +1,7 @@
 package com.br.leandro.desafio_mobile.presenter.model
 
-class Status {
+enum class Status {
+    SUCCESS,
+    ERROR,
+    LOADING
 }
