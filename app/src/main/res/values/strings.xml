@@ -1,40 +1,44 @@
 <resources>
-    <string name="app_name">Desafio_mobile</string>
-    <string name="character_image_contentDesc">Character image</string>
-    <string name="character_unknown">There\'s no information about %1$s</string>
-    <string name="no_results">No results 😓, please check your internet connection</string>
-    <string name="youtube_title_menu">Marvel Youtube</string>
-    <string name="title_youtube_toolbar">Youtube Marvel</string>
-    <string name="player_youtube_error">Failed to start the video 😓</string>
-    <string name="divisor_content_description">Divisor to videos</string>
-    <string name="default_image_player_content_description">Default image player</string>
-    <string name="splash_marvel_logo_content_desc">Marvel logo</string>
-    <string name="response_kind_video">youtube#video</string>
-
-    <!-- Comics Fragment -->
-    <string name="details_comics_text_button">COMICS</string>
-
-    <!-- MotionLayout Scenes -->
-    <string name="comic_text_button_start">COMICS</string>
-    <string name="comic_text_button_end">DESCRIPTION</string>
-
-    <!-- AlertDialog -->
-    <string name="alert_dialog_title_text">No videos found 😓</string>
-    <string name="alert_dialog_message_text">Do you want to go back or retry the videos search?</string>
-    <string name="alert_dialog_empty_list_close_text">Close</string>
-    <string name="alert_dialog_empty_list_retry_text">Retry</string>
-
-    <!-- ActionBar Labels -->
-    <string name="characters_title_action_bar">Marvel Super Heroes</string>
-    <string name="details_title_action_bar">Details</string>
-    <string name="youtube_title_action_bar">Marvel Youtube</string>
-    <string name="comics_title_action_bar">Comics</string>
-    <string name="character_title_action_br">Marvel Heros</string>
-    <string name="popularity">Polularity</string>
-    <string name="release_date">Release Date</string>
-    <string name="vote_count">Vote Count</string>
+    <string name="app_name">MovieGuide</string>
     <string name="fragment_movies">Movies</string>
     <string name="fragment_tvs">Series</string>
     <string name="fragment_celebrities">Celebrities</string>
+    <string name="transition_profile">transition_profile</string>
+    <string name="retry">Retry</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="empty_search_result">No results for <b>%s</b></string>
+    <string name="recent">Recent</string>
+    <string name="filter_movies_tab_name">Filter Your Movies</string>
+    <string name="filter_series_tab_name">Filter Your Series</string>
+    <string name="recent_searches">Recent Searches</string>
+    <string name="clear">CLEAR</string>
+    <string name="dialog_message">Clear recent searches and pages?</string>
+    <string name="cancel">Cancel</string>
+    <string name="see_results">SEE RESULTS</string>
+
+    // Filters titles
+    <string name="rating_title">IMDb Rating</string>
+    <string name="genre_title">Genre</string>
+    <string name="country_title">Country</string>
+    <string name="keyword_title">keywords</string>
+    <string name="runtime_title">Runtime</string>
+    <string name="year_title">Year</string>
+    <string name="language_title">Primary Language</string>
+    <string name="edit">Edit</string>
+    <string name="results">Results</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="reviews">Reviews</string>
+    <string name="trailers">Trailers</string>
+
+    <!-- Dialog filter types -->
+    <string name="popularity">Popularity</string>
+    <string name="release_date">Release Date</string>
+    <string name="vote_count">Vote Count</string>
+    <string name="filters">Filters</string>
+    <string name="tv_shows_and_series">TV Shows and Series</string>
+    <string name="movies">Movies</string>
+    <string name="rating">Rating:</string>
+    <string name="summary">Summary</string>
 
 </resources>
