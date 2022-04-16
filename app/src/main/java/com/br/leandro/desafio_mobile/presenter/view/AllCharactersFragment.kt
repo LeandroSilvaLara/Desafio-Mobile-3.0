@@ -24,12 +24,7 @@ class AllCharactersFragment : Fragment() {
 
     private val viewModel: AllCharactersViewModel by viewModel()
     private val networkChecker by lazy {
-        NetworkChecker(
-            ContextCompat.getSystemService(
-                requireContext(),
-                ConnectivityManager::class.java
-            )
-        )
+        NetworkChecker(ContextCompat.getSystemService(requireContext(), ConnectivityManager::class.java))
     }
     private lateinit var binding: FragmentAllCharactersBinding
     private lateinit var allCharactersAdapter: AllCharactersAdapter
@@ -95,5 +90,4 @@ class AllCharactersFragment : Fragment() {
             }
         }
     }
-
 }

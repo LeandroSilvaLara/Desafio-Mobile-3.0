@@ -4,7 +4,6 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.br.leandro.desafio_mobile.data.api.MarvelService
-import com.br.leandro.desafio_mobile.data.network.model.character.Character
 import com.br.leandro.desafio_mobile.data.repository.paging.CharacterPagingSource
 import kotlinx.coroutines.flow.Flow
 

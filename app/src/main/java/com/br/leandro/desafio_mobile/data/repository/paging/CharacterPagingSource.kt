@@ -3,7 +3,6 @@ package com.br.leandro.desafio_mobile.data.repository.paging
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.br.leandro.desafio_mobile.data.api.MarvelService
-import com.br.leandro.desafio_mobile.data.network.model.character.Character
 
 class CharacterPagingSource(private val apiService: MarvelService): PagingSource<Int, Character>() {
 

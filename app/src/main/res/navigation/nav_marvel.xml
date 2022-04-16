@@ -2,14 +2,14 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_marvel"
+    android:id="@+id/marvel_nav_graph"
     app:startDestination="@id/allCharactersFragment">
 
     <fragment
         android:id="@+id/allCharactersFragment"
         android:name="com.br.leandro.desafio_mobile.presenter.view.AllCharactersFragment"
-        android:label="@string/character_title_action_br"
-        tools:layout="@layout/fragment_all_characters">
+        android:label="@string/characters_title_action_bar"
+        tools:layout="@layout/fragment_all_characters" >
         <action
             android:id="@+id/action_allCharactersFragment_to_characterDetailsFragment"
             app:destination="@+id/characterDetailsFragment" />
@@ -17,7 +17,8 @@
     <fragment
         android:id="@+id/characterDetailsFragment"
         android:name="com.br.leandro.desafio_mobile.presenter.view.CharacterDetailsFragment"
-        android:label="@string/details_title_action_bar">
+        android:label="@string/details_title_action_bar"
+        tools:layout="@layout/fragment_character_details">
         <argument
             android:name="character"
             app:argType="com.br.leandro.desafio_mobile.data.network.model.charcacter.Character"

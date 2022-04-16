@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.br.leandro.desafio_mobile.databinding.ItemCharacterBinding
-import com.br.leandro.desafio_mobile.data.network.model.character.Character
 
 
 class AllCharactersAdapter(
