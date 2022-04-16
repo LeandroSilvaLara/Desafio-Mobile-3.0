@@ -1,4 +1,6 @@
 package com.br.leandro.desafio_mobile.presenter.model.network
 
-class VideoListResponse {
-}
+data class VideoListResponse(
+    val id: Int,
+    val results: List<Video>
+) : NetworkResponseModel
