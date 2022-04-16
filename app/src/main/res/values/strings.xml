@@ -30,5 +30,11 @@
     <string name="youtube_title_action_bar">Marvel Youtube</string>
     <string name="comics_title_action_bar">Comics</string>
     <string name="character_title_action_br">Marvel Heros</string>
+    <string name="popularity">Polularity</string>
+    <string name="release_date">Release Date</string>
+    <string name="vote_count">Vote Count</string>
+    <string name="fragment_movies">Movies</string>
+    <string name="fragment_tvs">Series</string>
+    <string name="fragment_celebrities">Celebrities</string>
 
 </resources>
