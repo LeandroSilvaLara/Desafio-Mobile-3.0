@@ -1,10 +1,9 @@
 package com.br.leandro.desafio_mobile.presenter.di
 
-import com.br.leandro.desafio_mobile.data.api.MarvelService
 import com.br.leandro.desafio_mobile.data.network.remote.MarvelRetrofit
-import com.br.leandro.desafio_mobile.data.repository.CharactersRepository
-import com.br.leandro.desafio_mobile.data.repository.ComicsRepository
-import com.br.leandro.desafio_mobile.data.repository.ComicsRepositoryImpl
+import com.br.leandro.desafio_mobile.data.service.CharactersRepository
+import com.br.leandro.desafio_mobile.data.service.ComicsRepository
+import com.br.leandro.desafio_mobile.data.service.ComicsRepositoryImpl
 import com.br.leandro.desafio_mobile.domain.GetComicsByCharacterId
 import com.br.leandro.desafio_mobile.domain.GetComicsByCharacterIdUseCase
 import com.br.leandro.desafio_mobile.presenter.viewmodel.AllCharactersViewModel

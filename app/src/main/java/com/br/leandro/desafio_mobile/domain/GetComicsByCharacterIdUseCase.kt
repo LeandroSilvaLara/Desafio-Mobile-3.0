@@ -1,7 +1,7 @@
 package com.br.leandro.desafio_mobile.domain
 
 import com.br.leandro.desafio_mobile.data.network.model.comics.Comic
-import com.br.leandro.desafio_mobile.data.repository.ComicsRepository
+import com.br.leandro.desafio_mobile.data.service.ComicsRepository
 import java.lang.Exception
 
 class GetComicsByCharacterId(

@@ -1,6 +1,6 @@
 package com.br.leandro.desafio_mobile.domain
 
-import com.br.leandro.desafio_mobile.data.repository.YoutubeVideoRepository
+import com.br.leandro.desafio_mobile.data.service.YoutubeVideoRepository
 import com.br.leandro.desafio_mobile.domain.model.Video
 import java.lang.Exception
 
