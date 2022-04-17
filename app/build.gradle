@@ -1,225 +1,103 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-parcelize'
-apply plugin: 'kotlin-kapt'
-apply plugin: 'androidx.navigation.safeargs.kotlin'
-apply plugin: "kotlin-allopen"
-
-def getProperty(String filename, String propName) {
-    def propsFile = rootProject.file(filename)
-    if (propsFile.exists()) {
-        def props = new Properties()
-        props.load(new FileInputStream(propsFile))
-        if (props[propName] != null) {
-            return props[propName]
-        } else {
-            print("No such property " + propName + " in file " + filename)
-        }
-    } else {
-        print(filename + " does not exist!")
-    }
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
 }
 
-allOpen {
-    // allows mocking for classes w/o directly opening them for release builds
-    annotation 'com.mustafa.movieguideapp.testing.OpenClass'
-}
 android {
-    compileSdkVersion rootProject.compileSdkVersion
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
     defaultConfig {
-        applicationId "com.mustafa.movieguideapp"
-        minSdkVersion rootProject.minSdkVersion
-        targetSdkVersion rootProject.targetSdkVersion
+        applicationId "com.br.leandro.marvelsuperheroes"
+        minSdkVersion 19
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
-        testInstrumentationRunner "com.mustafa.movieguideapp.util.MovieGuideTestRunner"
-        buildConfigField "String", "TMDB_API_KEY", "\"${getProperty("local.properties", "tmdb_api_key")}\""
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-    lintOptions {
-        lintConfig rootProject.file('lint.xml')
-    }
-    kapt {
-        correctErrorTypes = true
-    }
-    buildFeatures {
-        dataBinding = true
-        viewBinding true
-    }
-    dexOptions {
-        preDexLibraries true
-    }
-    sourceSets {
 
-        String sharedTestDir = "src/test-common/java"
-        test {
-            java.srcDirs += sharedTestDir
-        }
-        androidTest {
-            java.srcDirs += sharedTestDir
-        }
-//        androidTest.java.srcDirs += "src/test-common/java"
-//        test.java.srcDirs += "src/test-common/java"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
-        debug {
-            minifyEnabled false
-            testCoverageEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
-        }
         release {
-            minifyEnabled true
-            shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField("String", "API_KEY", "\"426a8a3c32e2543316228982d5e3d552\"")
+            buildConfigField("String", "PRIVATE_KEY", "\"3d286fee9404e7f0c565a623ccd54871b179a2b6\"")
+            buildConfigField("String", "YOUTUBE_KEY", "\"AIzaSyBJZ_BdXITaCdT7Cyz4VY8CkZjn-89FNng\"")
         }
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
-    testOptions.unitTests {
-        returnDefaultValues = true
-        all {
-            testLogging {
-                events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
-            }
-        }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
     }
 }
 
 dependencies {
-    def androidxVersion = '1.0.0'
-    def androidFragment = '1.2.5'
-    def recyclerVersion = '1.1.0'
-    def ankoVersion = '0.10.8'
-    def archComponentVersion = '2.1.0'
-    def roomVersion = '2.2.5'
-    def lifecycleVersion = '2.2.0'
-    def daggerVersion = '2.29.1'
-    def retrofitVersion = '2.9.0'
-    def googleJsonVersion = '2.8.6'
-    def okhttpVersion = '4.9.0'
-    def timberVersion = '4.7.1'
-    def stethoVersion = '1.5.1'
-    def glideVersion = '4.11.0'
-    def glidePaletteVersion = '2.1.2'
-    def androidTagViewVersion = '1.1.4'
-    def expandableTextViewVersion = '0.1.4'
-    def mockitoKotlinVersion = '2.2.0'
-    def junitVersion = '4.13.1'
-    def espressoVersion = '3.3.0'
-    def androidxTestCoreVersion = '1.3.0'
-    def archTestVersion = '2.1.0'
-    def mockitoAndroid = '3.3.3'
 
-    // support library
-    implementation "androidx.appcompat:appcompat:1.3.0-alpha02"
-    implementation 'androidx.activity:activity-ktx:1.1.0'
-    implementation "androidx.fragment:fragment-ktx:$androidFragment"
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation "androidx.palette:palette-ktx:$androidxVersion"
-    implementation "androidx.recyclerview:recyclerview:$recyclerVersion"
-    implementation "androidx.constraintlayout:constraintlayout:2.0.4"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:$core_version"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "com.google.android.material:material:$material_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
-    // kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
-    implementation "org.jetbrains.anko:anko:$ankoVersion"
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation "androidx.test.ext:junit:$junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    // Koin & Mock test Dependencies
+    testImplementation "org.koin:koin-test:$koin_version"
+    testImplementation "com.nhaarman:mockito-kotlin:$mockito_version"
+    testImplementation "io.mockk:mockk:$mockk_version"
 
-    // architecture components
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion"
-    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion"
-    implementation "androidx.room:room-runtime:$roomVersion"
-    implementation "androidx.room:room-ktx:$roomVersion"
-    kapt "androidx.room:room-compiler:$roomVersion"
+    // Retrofit Dependencies
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
 
-    //Splash Screen Library
-    implementation 'com.rbddevs.splashy:splashy:1.3.0'
+    // Koin Dependencies
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    // Moshi Dependencies
+    implementation "com.squareup.moshi:moshi:$moshi_version"
+    implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
 
-    // navigation
-    implementation "androidx.navigation:navigation-fragment-ktx:2.3.2"
-    implementation "androidx.navigation:navigation-ui-ktx:2.3.2"
+    // Lifecycle Dependencies
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_ex_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_vm_version"
 
-    // dependency injection
-    implementation "com.google.dagger:dagger:2.30"
-    implementation "com.google.dagger:dagger-android:2.30"
-    implementation "com.google.dagger:dagger-android-support:2.30"
-    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
-    kapt "com.google.dagger:dagger-android-processor:2.30"
+    //Navigation Dependencies
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
-    debugImplementation "androidx.fragment:fragment-testing:$androidFragment"
-    debugImplementation "androidx.test:core:$androidxTestCoreVersion"
-    debugImplementation "androidx.test:monitor:$androidxTestCoreVersion"
+    // Paging3 Dependency
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
 
-    // network
-    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
-    implementation "com.google.code.gson:gson:$googleJsonVersion"
+    // Glide Dependency
+    implementation "com.github.bumptech.glide:glide:$glide_version"
 
+    //Youtube Dependency
+    implementation files("libs/YouTubeAndroidPlayerApi.jar")
 
-    // glide
-    implementation "com.github.bumptech.glide:glide:$glideVersion"
-    implementation "com.github.florent37:glidepalette:$glidePaletteVersion"
-    kapt "com.github.bumptech.glide:compiler:$glideVersion"
+    // Lottie Dependency
+    implementation "com.airbnb.android:lottie:$lottie_version"
 
+    // AdMob Dependency
+    implementation "com.google.android.gms:play-services-ads:$admob_version"
 
-    // debugging
-    implementation "com.jakewharton.timber:timber:$timberVersion"
-    implementation "com.facebook.stetho:stetho:$stethoVersion"
-    implementation "com.facebook.stetho:stetho-okhttp3:$stethoVersion"
+    //DataStore Dependency
+    implementation("androidx.datastore:datastore-preferences:$datastore_preferences")
 
-    // custom view
-    implementation "co.lujun:androidtagview:$androidTagViewVersion"
-    implementation "com.ms-square:expandableTextView:$expandableTextViewVersion"
-
-    // unit test
-    testImplementation "junit:junit:$junitVersion"
-    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
-    testImplementation "androidx.arch.core:core-testing:$archComponentVersion"
-    testImplementation "com.squareup.okhttp3:mockwebserver:$okhttpVersion"
-
-    //Core Library
-    androidTestImplementation "androidx.test:core:$androidxTestCoreVersion"
-
-    // AndroidJUnitRunner and JUnit Rules
-    androidTestImplementation "androidx.test:rules:1.3.0"
-    androidTestImplementation "androidx.test:runner:1.3.0"
-
-    // Assertions
-    androidTestImplementation "androidx.test.ext:junit:1.1.2"
-    androidTestImplementation 'androidx.test.ext:truth:1.3.0'
-    androidTestImplementation 'com.google.truth:truth:1.1'
-
-    androidTestImplementation "androidx.arch.core:core-testing:$archTestVersion"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
-    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
-
-    androidTestImplementation "org.mockito:mockito-android:$mockitoAndroid"
-    androidTestImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
-    androidTestImplementation "androidx.navigation:navigation-testing:2.3.2"
-
-    //Leak canary: LeakCanary is a memory leak detection library for Android.
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.5'
-
-
-    // Barista's scrollTo(R.id.button) works on all kinds of scrollable views, also on NestedScroll
-    androidTestImplementation "com.schibsted.spain:barista:3.3.0"
-
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.+'
 }
-
-
-// we need all open to run tests which  a we enable only for debug builds.
-project.tasks.whenTaskAdded {
-    if (it.name == "testReleaseUnitTest") {
-        it.enabled = false
-    }
-}
+apply plugin: "androidx.navigation.safeargs.kotlin"

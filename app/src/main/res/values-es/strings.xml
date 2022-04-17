@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Marvel Super Heroes</string>
+    <string name="character_image_contentDesc">Imagen de personaje</string>
+    <string name="character_unknown">No hay información sobre %1$s</string>
+    <string name="no_results">No hay resultados 😓, por favor revise su conexion a internet</string>
+    <string name="youtube_title_menu">Marvel Youtube</string>
+    <string name="title_youtube_toolbar">Youtube Marvel</string>
+    <string name="player_youtube_error">No se pudo iniciar el video 😓</string>
+    <string name="divisor_content_description">Divisor para videos</string>
+    <string name="default_image_player_content_description">Default image player</string>
+    <string name="splash_marvel_logo_content_desc">Marvel logo</string>
+    <string name="response_kind_video">youtube#video</string>
+
+    <!-- Comics Fragment -->
+    <string name="details_comics_text_button">COMICS</string>
+
+    <!-- MotionLayout Scenes -->
+    <string name="comic_text_button_start">CÓMICS</string>
+    <string name="comic_text_button_end">DETALLES</string>
+
+    <!-- AlertDialog -->
+    <string name="alert_dialog_title_text">No se encontraron vídeos 😓</string>
+    <string name="alert_dialog_message_text">¿Quieres volver o reintentar la búsqueda de vídeos?</string>
+    <string name="alert_dialog_empty_list_close_text">Volver</string>
+    <string name="alert_dialog_empty_list_retry_text">Reintentar</string>
+
+    <!-- ActionBar Labels -->
+    <string name="characters_title_action_bar">Marvel Super Heroes</string>
+    <string name="details_title_action_bar">Detalles</string>
+    <string name="youtube_title_action_bar">Marvel Youtube</string>
+    <string name="comics_title_action_bar">Comics</string>
+</resources>
