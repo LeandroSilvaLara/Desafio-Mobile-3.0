@@ -24,7 +24,6 @@ allOpen {
     // allows mocking for classes w/o directly opening them for release builds
     annotation 'com.mustafa.movieguideapp.testing.OpenClass'
 }
-
 android {
     compileSdkVersion rootProject.compileSdkVersion
     defaultConfig {
@@ -37,7 +36,6 @@ android {
         testInstrumentationRunner "com.mustafa.movieguideapp.util.MovieGuideTestRunner"
         buildConfigField "String", "TMDB_API_KEY", "\"${getProperty("local.properties", "tmdb_api_key")}\""
     }
-
     kotlinOptions {
         jvmTarget = "1.8"
     }

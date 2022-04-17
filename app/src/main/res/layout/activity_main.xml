@@ -26,5 +26,4 @@
         android:visibility="gone"
         tools:visibility="visible"
         app:menu="@menu/menus" />
-
 </LinearLayout>
